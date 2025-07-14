@@ -85,6 +85,15 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y tmux
+    
+      #  configure 'SSH_KEY'.
+    - name: Setup SSH Key for Crave Devspace
+      run: |
+       mkdir -p ~/.ssh
+       echo "${{ secrets.CRAVE_SSH_KEY }}" > ~/.ssh/crave_key_rsa
+       chmod 600 ~/.ssh/crave_key_rsa
+       echo -e "Host crave\n  HostName localhost\n  Port 33632\n  User admin\n  IdentityFile ~/.ssh/crave_key_rsa\n  StrictHostKeyChecking=no" >> ~/.ssh/config
+
 
       # Download and configure 'crave'.
     - name: Configure the 'crave' environment
