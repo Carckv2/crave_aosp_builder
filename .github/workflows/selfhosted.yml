@@ -310,6 +310,7 @@ jobs:
         rm -rf tester
         mkdir tester
         cd tester 
+        rm -rf .repo/local_manifests
         if [ "${{ github.event.inputs.BUILD_DIFFERENT_ROM }}" == "echo 'Build Starting!'" ]; then
           $REPO_INIT
         else
