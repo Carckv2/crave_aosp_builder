@@ -38,7 +38,7 @@ on:
       LOCAL_MANIFEST:
         description: "Personal local manifest [repository or raw]:"
         required: true
-        default: 'https://github.com/Carckv2/local_manifests_violet'
+        default: 'https://github.com/Carckv2/local_manifests_violet.git'
       LOCAL_MANIFEST_BRANCH:
         description: "Personal local manifest's branch:"
         required: false
