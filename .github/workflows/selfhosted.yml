@@ -165,7 +165,7 @@ jobs:
         "Crdroid 10.0")
           export PROJECTFOLDER="/crave-devspaces/crdroid-10.0"
           export PROJECTID="36"
-          export REPO_INIT="repo init -u https://github.com/Carckv2/android_.git -b 10.0"
+          export REPO_INIT="repo init -u https://github.com/Carckv2/android_.git -b 10.0 --depth=1"
         ;;
         "CipherOS 14")
           export PROJECTFOLDER="/crave-devspaces/Cipher14"
