@@ -328,6 +328,8 @@ jobs:
         fi 
 
         bash -c "$LOCAL_MANIFEST"
+        rm -rf .repo/local_manifests
+
 
         timeout 1m repo sync --force-sync || { exit_code=$?; [ $exit_code -eq 124 ] || (echo "Error: Process failed with exit code $exit_code"; exit $exit_code); }
         du -csh . # Output Size when done
