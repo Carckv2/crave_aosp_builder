@@ -1,8 +1,8 @@
 {
-  "username": "${ankitshresthaas5@gmail.com}",
+  "username": "${CRAVE_USERNAME}",
   "headers": {
     "Content-Type": "application/json",
-    "Authorization": "${eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjUwMywidGVhbUlkIjoxNCwiaXNBcGlLZXkiOnRydWUsImlhdCI6MTc1MjQyNTIyNX0.QHzGYdxE1_cK54mu05F-Mjl_RyegrVSBa4UXEp-NH5Y}",
+    "Authorization": "${CRAVE_TOKEN}",
     "User-Agent": "Crave"
   },
   "projects": [],
