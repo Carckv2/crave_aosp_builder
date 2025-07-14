@@ -321,6 +321,7 @@ jobs:
         cd tester 
         rm -rf .repo
         if [ "${{ github.event.inputs.BUILD_DIFFERENT_ROM }}" == "echo 'Build Starting!'" ]; then
+          rm -rf .repo
           $REPO_INIT
         else
           ${{ github.event.inputs.BUILD_DIFFERENT_ROM }}
