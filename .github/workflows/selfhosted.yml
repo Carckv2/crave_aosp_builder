@@ -16,7 +16,7 @@ on:
         default: 'LineageOS 21.0'
         type: choice
         options:
-          - 'LineageOS 20.0'
+          - 'Crdroid 10.0'
           - 'LineageOS 21.0'
           - 'LineageOS 22.1'
           - 'ArrowOS 13.1'
@@ -38,7 +38,7 @@ on:
       LOCAL_MANIFEST:
         description: "Personal local manifest [repository or raw]:"
         required: true
-        default: 'https://github.com/sounddrill31/local_manifests_oxygen'
+        default: 'https://github.com/Carckv2/local_manifests_violet'
       LOCAL_MANIFEST_BRANCH:
         description: "Personal local manifest's branch:"
         required: false
@@ -46,11 +46,11 @@ on:
       DEVICE_NAME:
         description: "Device's codename:"
         required: true
-        default: "oxygen"
+        default: "violet"
       PRODUCT_NAME:
         description: "Product to build:"
         required: true
-        default: "oxygen"
+        default: "violet"
       BUILD_COMMAND:
         description: 'Command to be used for compiling:'
         required: true
@@ -163,9 +163,9 @@ jobs:
           export REPO_INIT="repo init -u https://github.com/accupara/los22.git -b lineage-22.1 --git-lfs --depth=1"
         ;;
         "LineageOS 20.0")
-          export PROJECTFOLDER="/crave-devspaces/Lineage20"
+          export PROJECTFOLDER="/crave-devspaces/crdroid-10.0"
           export PROJECTID="36"
-          export REPO_INIT="repo init -u https://github.com/accupara/los20.git -b lineage-20.0 --git-lfs --depth=1"
+          export REPO_INIT="repo init -u https://github.com/Carckv2/android_.git -b 10.0"
         ;;
         "CipherOS 14")
           export PROJECTFOLDER="/crave-devspaces/Cipher14"
