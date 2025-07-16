@@ -34,7 +34,7 @@ on:
         default: "repo init -u https://github.com/Carckv2/android_.git -b 10.0 --depth=1"
       REMOVALS:
         description: "Folders to be removed before syncing:"
-        required: true
+        required: false
       LOCAL_MANIFEST:
         description: "Personal local manifest [repository or raw]:"
         required: true
