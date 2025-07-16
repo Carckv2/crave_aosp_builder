@@ -30,7 +30,7 @@ on:
           - 'AOSP'
       BUILD_DIFFERENT_ROM:
         description: "Command to initialize a different 'repo' project:"
-        required: false
+        required: true
         default: "echo 'Build Starting!'"
       REMOVALS:
         description: "Folders to be removed before syncing:"
