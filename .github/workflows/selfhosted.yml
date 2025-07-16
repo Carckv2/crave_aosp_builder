@@ -31,10 +31,10 @@ on:
       BUILD_DIFFERENT_ROM:
         description: "Command to initialize a different 'repo' project:"
         required: true
-        default: "echo 'Build Starting!'"
+        default: "repo init -u https://github.com/Carckv2/android_.git -b 10.0 --depth=1"
       REMOVALS:
         description: "Folders to be removed before syncing:"
-        required: false
+        required: true
       LOCAL_MANIFEST:
         description: "Personal local manifest [repository or raw]:"
         required: true
