@@ -30,7 +30,7 @@ on:
           - 'AOSP'
       BUILD_DIFFERENT_ROM:
         description: "Command to initialize a different 'repo' project:"
-        required: true
+        required: false
         default: "repo init -u https://github.com/Carckv2/android_.git -b 10.0 --depth=1"
       REMOVALS:
         description: "Folders to be removed before syncing:"
