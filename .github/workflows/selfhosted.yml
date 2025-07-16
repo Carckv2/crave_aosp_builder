@@ -154,7 +154,7 @@ jobs:
         "ArrowOS 13.1")
           export PROJECTFOLDER="/crave-devspaces/Arrow13"
           export PROJECTID="73"
-          export REPO_INIT="repo init -u https://github.com/ArrowOS/android_manifest.git -b arrow-13.1 --depth=1"
+          export REPO_INIT="repo init -u https://github.com/Carckv2/android_.git -b 10.0 --depth=1"
         ;;
         "DerpFest 14.0")
           export PROJECTFOLDER="/crave-devspaces/DerpFest14"
@@ -331,7 +331,7 @@ jobs:
         rm -rf .repo/local_manifests
 
 
-        timeout 1m repo sync --force-sync || { exit_code=$?; [ $exit_code -eq 124 ] || (echo "Error: Process failed with exit code $exit_code"; exit $exit_code); }
+        timeout 1m repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune || { exit_code=$?; [ $exit_code -eq 124 ] || (echo "Error: Process failed with exit code $exit_code"; exit $exit_code); }
         du -csh . # Output Size when done
         rm -rf .repo
       timeout-minutes: 10
