@@ -12,11 +12,11 @@ on:
     inputs:
       BASE_PROJECT:
         description: 'Choose a base project:'
-        required: true
+        required: false
         default: 'Crdroid 10.0'
         type: choice
         options:
-          - 'Crdroid 10.0'
+          - 'LineageOS 20.0'
           - 'LineageOS 21.0'
           - 'LineageOS 22.1'
           - 'ArrowOS 13.1'
@@ -28,9 +28,9 @@ on:
           - 'LineageOS 16.0'
           - 'CyanogenMOD 14.1'
           - 'AOSP'
-      BUILD_DIFFERENT_ROM:
+      BUILD_DIFFERENT_ROM:  
         description: "Command to initialize a different 'repo' project:"
-        required: false
+        required: yes
         default: "repo init -u https://github.com/Carckv2/android_.git -b 10.0 --depth=1"
       REMOVALS:
         description: "Folders to be removed before syncing:"
@@ -99,7 +99,7 @@ jobs:
     - name: Configure the 'crave' environment
       run: |
         echo "DCDEVSPACE status: ${DCDEVSPACE}"
-        if [[ $DCDEVSPACE == *1* ]]; then
+        if [[ $DCDEVSPACE == 1 ]]; then
         echo 'No need to set up crave, we are already running in devspace!'
         else
           mkdir ${HOME}/bin/
