@@ -12,7 +12,7 @@ on:
     inputs:
       BASE_PROJECT:
         description: 'Choose a base project:'
-        required: false
+        required: true
         default: 'Crdroid 10.0'
         type: choice
         options:
