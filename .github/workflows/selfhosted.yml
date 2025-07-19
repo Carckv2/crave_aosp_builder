@@ -201,6 +201,11 @@ jobs:
           export PROJECTID="81"
           export REPO_INIT="repo init -u https://github.com/accupara/los16.git -b lineage-16.0 --git-lfs --depth=1"
         ;;
+        "lineage 17.1")
+          export PROJECTFOLDER="/crave-devspaces/lineage-17"
+          export PROJECTID="81"
+          export REPO_INIT="repo init -u https://github.com/Carckv2/android_.git -b 10.0 --depth=1"
+        ;;        
         "CyanogenMOD 14.1")
           export PROJECTFOLDER="/crave-devspaces/Cyanogen14"
           export PROJECTID="83"
